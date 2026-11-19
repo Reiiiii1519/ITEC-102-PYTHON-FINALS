@@ -1,0 +1,13 @@
+
+import textwrap
+
+# Create a paragraph
+paragraph = """Python is easy to learn.
+It is used for web development.
+It can also automate tasks."""
+
+# Add indentation to every line
+indented_text = textwrap.indent(paragraph, "    ")
+
+# Display the result
+print(indented_text)

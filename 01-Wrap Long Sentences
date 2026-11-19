@@ -1,0 +1,12 @@
+
+import textwrap
+
+# Create a long sentence
+sentence = "Python is a programming language that allows developers to create applications, automate tasks, and process information efficiently."
+
+# Wrap the sentence into lines
+wrapped_text = textwrap.wrap(sentence, width=40)
+
+# Display the result
+for line in wrapped_text:
+    print(line)

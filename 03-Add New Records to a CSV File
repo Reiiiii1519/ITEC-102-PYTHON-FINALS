@@ -1,0 +1,15 @@
+
+import csv
+
+# New student record
+new_student = ["Peter", 21, "BSCS"]
+
+# Open the CSV file in append mode
+with open("students.csv", "a", newline="") as file:
+
+    writer = csv.writer(file)
+
+    # Add the new record
+    writer.writerow(new_student)
+
+print("New student record added successfully!")

@@ -1,0 +1,15 @@
+
+import os
+
+folder_name = "MyPythonFolder"
+
+# Check if the folder already exists
+if not os.path.exists(folder_name):
+
+    # Create the folder
+    os.mkdir(folder_name)
+
+    print("Folder created successfully!")
+
+else:
+    print("Folder already exists.")

@@ -1,0 +1,16 @@
+
+import os
+
+file_name = "notes.txt"
+
+# Check if the file exists
+if os.path.exists(file_name):
+
+    if os.path.isfile(file_name):
+        print("The file exists!")
+
+    else:
+        print("The path exists, but it is not a file.")
+
+else:
+    print("The file does not exist.")

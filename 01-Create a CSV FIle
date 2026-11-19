@@ -1,0 +1,17 @@
+
+import csv
+
+# Create student records
+students = [
+    ["Name", "Age", "Course"],
+    ["Daniel", 18, "BSIT"],
+    ["Mark", 19, "BSCS"],
+    ["John", 20, "BSIT"]
+]
+
+# Create and write to a CSV file
+with open("students.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows(students)
+
+print("CSV file created successfully!")

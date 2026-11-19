@@ -1,0 +1,15 @@
+
+import textwrap
+
+# Create a long paragraph
+paragraph = "Python is a powerful programming language used for web development, automation, data analysis, and many other applications."
+
+# Shorten the paragraph
+shortened_text = textwrap.shorten(
+    paragraph,
+    width=60,
+    placeholder="..."
+)
+
+# Display the result
+print(shortened_text)

@@ -1,0 +1,16 @@
+
+import os
+
+# Get the current directory
+current_folder = os.getcwd()
+
+# Display the directory
+print("Current Directory:", current_folder)
+
+# List all files and folders
+files = os.listdir(current_folder)
+
+print("\nFiles and Folders:")
+
+for file in files:
+    print(file)

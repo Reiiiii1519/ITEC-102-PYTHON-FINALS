@@ -1,0 +1,12 @@
+
+import csv
+
+# Open the CSV file
+with open("students.csv", "r", newline="") as file:
+
+    # Read the CSV contents
+    reader = csv.reader(file)
+
+    # Display each row
+    for row in reader:
+        print(row)
