@@ -1,0 +1,103 @@
+
+"""Module 9 – List Methods vs Functions
+Run one example at a time. Examples progress from Easy to Hard.
+"""
+
+# Easy 1: Using the append() Method
+# A method is a function that belongs to an object.
+# append() adds a new item to the end of a list.
+
+fruits = ["Apple", "Banana", "Orange"]
+
+fruits.append("Mango")
+
+print(fruits)
+
+
+# Easy 2: Using the remove() Method
+# remove() deletes a specific item from a list.
+
+fruits = ["Apple", "Banana", "Orange", "Mango"]
+
+fruits.remove("Banana")
+
+print(fruits)
+
+
+# Easy 3: Using the len() Function
+# A function is called independently and performs a specific task.
+# len() returns the number of items in a list.
+
+fruits = ["Apple", "Banana", "Orange", "Mango"]
+
+total = len(fruits)
+
+print("Total Fruits:", total)
+
+
+# Easy 4: Using the sort() Method
+# sort() arranges list items in ascending order.
+
+numbers = [5, 2, 8, 1, 9, 3]
+
+numbers.sort()
+
+print("Sorted Numbers:", numbers)
+
+
+# Intermediate 1: Using the reverse() Method
+# reverse() changes the order of list items.
+
+numbers = [1, 2, 3, 4, 5]
+
+numbers.reverse()
+
+print("Reversed List:", numbers)
+
+
+# Intermediate 2: Using the max() and min() Functions
+# max() returns the largest value.
+# min() returns the smallest value.
+
+grades = [85, 90, 78, 95, 88]
+
+print("Highest Grade:", max(grades))
+print("Lowest Grade:", min(grades))
+
+
+# Intermediate 3: Using the count() and index() Methods
+# count() counts how many times an item appears.
+# index() returns the position of the first matching item.
+
+numbers = [10, 20, 30, 20, 40, 20]
+
+print("Number of 20s:", numbers.count(20))
+print("Position of 30:", numbers.index(30))
+
+
+# Hard: Student Grade Analyzer
+# This program uses list methods and built-in functions
+# to organize and analyze student grades.
+
+grades = [85, 92, 78, 95, 88, 90]
+
+print("Original Grades:", grades)
+
+grades.append(87)
+print("After Adding Grade:", grades)
+
+grades.remove(78)
+print("After Removing Grade:", grades)
+
+grades.sort()
+print("Sorted Grades:", grades)
+
+print("\n===== GRADE ANALYSIS =====")
+print("Total Grades:", len(grades))
+print("Highest Grade:", max(grades))
+print("Lowest Grade:", min(grades))
+print("Total Score:", sum(grades))
+print("Average Grade:", round(sum(grades) / len(grades), 2))
+
+grades.reverse()
+print("Descending Order:", grades)

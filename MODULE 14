@@ -1,0 +1,74 @@
+"""Module 14 - File Streaming
+Run one example at a time. Examples progress from Easy to Hard.
+"""
+
+# EASY 1: Create and write to a file
+file = open("sample.txt", "w")
+file.write("Hello, Python!")
+file.close()
+
+print("File created successfully.")
+
+
+# EASY 2: Read a file
+file = open("sample.txt", "r")
+content = file.read()
+file.close()
+
+print(content)
+
+
+# EASY 3: Append text to a file
+file = open("sample.txt", "a")
+file.write("\nThis is another line.")
+file.close()
+
+print("Text added successfully.")
+
+
+# INTERMEDIATE 1: Read a file line by line
+file = open("sample.txt", "r")
+
+for line in file:
+    print(line.strip())
+
+file.close()
+
+
+# INTERMEDIATE 2: Use the with statement
+with open("sample.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+
+# INTERMEDIATE 3: Write multiple lines
+lines = ["Apple\n", "Banana\n", "Orange\n"]
+
+with open("fruits.txt", "w") as file:
+    file.writelines(lines)
+
+print("Multiple lines saved.")
+
+
+# INTERMEDIATE 4: Count lines in a file
+with open("fruits.txt", "r") as file:
+    line_count = 0
+
+    for line in file:
+        line_count += 1
+
+print("Total lines:", line_count)
+
+
+# HARD: Copy a file using streaming
+with open("fruits.txt", "r") as source:
+    with open("fruits_copy.txt", "w") as destination:
+        while True:
+            chunk = source.read(10)
+
+            if not chunk:
+                break
+
+            destination.write(chunk)
+
+print("File copied successfully.")

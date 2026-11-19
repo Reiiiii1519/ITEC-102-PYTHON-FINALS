@@ -1,0 +1,80 @@
+
+"""Module 6 – For Loops & Range
+Run one example at a time. Examples progress from Easy to Hard.
+"""
+
+# Easy 1: Basic For Loop
+# A for loop repeats a block of code for each item in a sequence.
+for number in range(5):
+    print(number)
+
+
+# Easy 2: Print Numbers from 1 to 10
+# range(1, 11) generates numbers from 1 up to 10.
+for number in range(1, 11):
+    print(number)
+
+
+# Easy 3: Print Even Numbers
+# The third argument determines the increment or step.
+for number in range(2, 11, 2):
+    print(number)
+
+
+# Easy 4: Print Numbers in Reverse
+# A negative step allows the loop to count backwards.
+for number in range(10, 0, -1):
+    print(number)
+
+
+# Intermediate 1: Calculate the Sum of Numbers
+total = 0
+
+for number in range(1, 11):
+    total += number
+
+print("Total Sum:", total)
+
+
+# Intermediate 2: Multiplication Table
+number = int(input("Enter a number: "))
+
+for count in range(1, 11):
+    print(number, "x", count, "=", number * count)
+
+
+# Intermediate 3: Count Vowels in a Word
+word = input("Enter a word: ")
+vowels = "aeiou"
+count = 0
+
+for letter in word.lower():
+    if letter in vowels:
+        count += 1
+
+print("Number of vowels:", count)
+
+
+# Hard: Student Grade Calculator
+students = int(input("Enter number of students: "))
+total = 0
+
+for number in range(1, students + 1):
+    print("\nStudent", number)
+
+    name = input("Enter student name: ")
+    grade = float(input("Enter student grade: "))
+
+    total += grade
+
+    print("Name:", name)
+    print("Grade:", grade)
+
+if students > 0:
+    average = total / students
+    print("\n===== CLASS SUMMARY =====")
+    print("Total Students:", students)
+    print("Total Grades:", total)
+    print("Class Average:", round(average, 2))
+else:
+    print("No students entered.")

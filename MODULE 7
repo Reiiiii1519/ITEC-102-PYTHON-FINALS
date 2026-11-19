@@ -1,0 +1,102 @@
+
+"""Module 7 – List Basics & For-In Loops
+Run one example at a time. Examples progress from Easy to Hard.
+"""
+
+# Easy 1: Create and Display a List
+# A list stores multiple values in a single variable.
+fruits = ["Apple", "Banana", "Orange", "Mango"]
+
+print(fruits)
+
+
+# Easy 2: Access List Items
+# List indexing starts at 0.
+fruits = ["Apple", "Banana", "Orange", "Mango"]
+
+print("First fruit:", fruits[0])
+print("Second fruit:", fruits[1])
+print("Last fruit:", fruits[-1])
+
+
+# Easy 3: Add and Remove Items
+# append() adds an item, while remove() deletes an item.
+fruits = ["Apple", "Banana", "Orange"]
+
+fruits.append("Mango")
+print("After adding:", fruits)
+
+fruits.remove("Banana")
+print("After removing:", fruits)
+
+
+# Easy 4: Find the Length of a List
+# len() returns the total number of items in a list.
+colors = ["Red", "Blue", "Green", "Yellow"]
+
+print("Number of colors:", len(colors))
+
+
+# Intermediate 1: Display List Items Using For-In
+# A for-in loop goes through each item in a list.
+fruits = ["Apple", "Banana", "Orange", "Mango"]
+
+for fruit in fruits:
+    print(fruit)
+
+
+# Intermediate 2: Calculate the Sum of List Numbers
+# The loop adds each number to the total.
+numbers = [10, 20, 30, 40, 50]
+total = 0
+
+for number in numbers:
+    total += number
+
+print("Total Sum:", total)
+
+
+# Intermediate 3: Find Even and Odd Numbers
+# The modulus operator checks whether a number is divisible by 2.
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for number in numbers:
+    if number % 2 == 0:
+        print(number, "is Even")
+    else:
+        print(number, "is Odd")
+
+
+# Hard: Student Grade Management System
+# This program stores student names and grades,
+# displays each student's result, and calculates the class average.
+
+students = ["Alex", "Maria", "John", "Sarah"]
+grades = [90, 85, 88, 95]
+
+total = 0
+
+print("\n===== STUDENT GRADE REPORT =====")
+
+for index in range(len(students)):
+    name = students[index]
+    grade = grades[index]
+
+    total += grade
+
+    print("Student:", name)
+    print("Grade:", grade)
+
+    if grade >= 90:
+        print("Remark: Excellent")
+    elif grade >= 75:
+        print("Remark: Passed")
+    else:
+        print("Remark: Failed")
+
+    print("----------------------")
+
+average = total / len(grades)
+
+print("Total Students:", len(students))
+print("Class Average:", round(average, 2))

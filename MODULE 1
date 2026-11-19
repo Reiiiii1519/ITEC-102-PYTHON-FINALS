@@ -1,0 +1,81 @@
+
+"""Module 1 – Printing, Input & Variables
+Run one example at a time. Examples progress from Easy to Hard.
+"""
+
+# Easy 1: Basic printing
+print("Hello, World!")
+print("Welcome to Python Programming!")
+
+
+# Easy 2: Print multiple values
+name = "Daniel"
+age = 18
+course = "Information Technology"
+print("Name:", name)
+print("Age:", age)
+print("Course:", course)
+
+
+# Easy 3: Store and display variables
+student_name = "Daniel"
+student_age = 18
+student_grade = 95
+print(student_name)
+print(student_age)
+print(student_grade)
+
+
+# Easy 4: Different variable data types
+name = "Daniel"
+age = 18
+height = 1.70
+is_student = True
+print(name, type(name))
+print(age, type(age))
+print(height, type(height))
+print(is_student, type(is_student))
+
+
+# Intermediate 1: Ask for user information
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+print("Hello,", name)
+print("You are", age, "years old.")
+
+
+# Intermediate 2: Convert input to integer
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+total = num1 + num2
+print("Sum:", total)
+
+
+# Intermediate 3: Calculate a rectangle
+length = float(input("Enter length: "))
+width = float(input("Enter width: "))
+area = length * width
+print("Rectangle Area:", area)
+
+
+# Hard: Interactive student information system
+name = input("Enter student name: ")
+age = int(input("Enter age: "))
+course = input("Enter course: ")
+
+math = float(input("Enter Math grade: "))
+science = float(input("Enter Science grade: "))
+english = float(input("Enter English grade: "))
+
+average = (math + science + english) / 3
+
+print("\n===== STUDENT REPORT =====")
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"Course: {course}")
+print(f"Math Grade: {math}")
+print(f"Science Grade: {science}")
+print(f"English Grade: {english}")
+print(f"Average Grade: {average:.2f}")
+
+

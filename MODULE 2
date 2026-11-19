@@ -1,0 +1,94 @@
+
+"""Module 2 – Operators & Basic If-Else
+Run one example at a time. Examples progress from Easy to Hard.
+"""
+
+# Easy 1: Arithmetic operators
+num1 = 10
+num2 = 5
+
+print("Addition:", num1 + num2)
+print("Subtraction:", num1 - num2)
+print("Multiplication:", num1 * num2)
+print("Division:", num1 / num2)
+
+
+# Easy 2: Modulus and exponentiation
+num1 = 10
+num2 = 3
+
+print("Remainder:", num1 % num2)
+print("Exponent:", num1 ** num2)
+print("Floor Division:", num1 // num2)
+
+
+# Easy 3: Comparison operators
+a = 15
+b = 10
+
+print(a > b)
+print(a < b)
+print(a == b)
+print(a != b)
+print(a >= b)
+print(a <= b)
+
+
+# Easy 4: Assignment operators
+number = 10
+
+number += 5
+print("After addition:", number)
+
+number -= 3
+print("After subtraction:", number)
+
+number *= 2
+print("After multiplication:", number)
+
+
+# Intermediate 1: Check if a number is positive or negative
+number = int(input("Enter a number: "))
+
+if number > 0:
+    print("Positive number")
+else:
+    print("Negative or zero")
+
+
+# Intermediate 2: Check if a number is even or odd
+number = int(input("Enter a number: "))
+
+if number % 2 == 0:
+    print("Even number")
+else:
+    print("Odd number")
+
+
+# Intermediate 3: Check voting eligibility
+age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("You are eligible to vote.")
+else:
+    print("You are not eligible to vote.")
+
+
+# Hard: Student grading system
+name = input("Enter student name: ")
+grade = float(input("Enter your grade: "))
+
+print("\n===== STUDENT GRADE RESULT =====")
+print("Student:", name)
+print("Grade:", grade)
+
+if grade >= 90:
+    print("Remark: Excellent")
+elif grade >= 85:
+    print("Remark: Very Good")
+elif grade >= 80:
+    print("Remark: Good")
+elif grade >= 75:
+    print("Remark: Passed")
+else:
+    print("Remark: Failed")

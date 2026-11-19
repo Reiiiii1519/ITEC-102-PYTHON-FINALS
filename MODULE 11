@@ -1,0 +1,132 @@
+
+"""Module 11 – Python Functions
+Run one example at a time. Examples progress from Easy to Hard.
+"""
+
+# Easy 1: Create a Basic Function
+# A function is a reusable block of code that performs a specific task.
+def greet():
+    print("Hello, Python!")
+
+greet()
+
+
+# Easy 2: Function with Parameters
+# Parameters allow a function to receive information.
+def greet(name):
+    print("Hello,", name)
+
+greet("Daniel")
+greet("Alex")
+
+
+# Easy 3: Function with Multiple Parameters
+# A function can accept multiple parameters.
+def introduce(name, age, course):
+    print("Name:", name)
+    print("Age:", age)
+    print("Course:", course)
+
+introduce("Daniel", 18, "Information Technology")
+
+
+# Easy 4: Function with a Return Value
+# return sends a result back to the caller.
+def add(num1, num2):
+    return num1 + num2
+
+result = add(10, 20)
+print("Sum:", result)
+
+
+# Intermediate 1: Function with User Input
+# Functions can process information entered by the user.
+def calculate_square(number):
+    return number ** 2
+
+num = int(input("Enter a number: "))
+print("Square:", calculate_square(num))
+
+
+# Intermediate 2: Function with Default Parameters
+# Default parameters provide values when no argument is supplied.
+def greet(name="Student"):
+    print("Welcome,", name)
+
+greet()
+greet("Daniel")
+
+
+# Intermediate 3: Function with Conditions
+# Functions can contain if-elif-else statements.
+def check_grade(grade):
+    if grade >= 90:
+        return "Excellent"
+    elif grade >= 75:
+        return "Passed"
+    else:
+        return "Failed"
+
+grade = float(input("Enter your grade: "))
+print("Result:", check_grade(grade))
+
+
+# Hard: Student Grade Management System
+# This program uses multiple functions to collect student information,
+# calculate grades, determine remarks, and display a report.
+
+def get_student_info():
+    name = input("Enter student name: ")
+    course = input("Enter course: ")
+
+    return name, course
+
+
+def get_grades():
+    grades = []
+
+    for subject in range(1, 4):
+        grade = float(input(f"Enter grade for Subject {subject}: "))
+        grades.append(grade)
+
+    return grades
+
+
+def calculate_average(grades):
+    return sum(grades) / len(grades)
+
+
+def get_remark(average):
+    if average >= 90:
+        return "Excellent"
+    elif average >= 85:
+        return "Very Good"
+    elif average >= 75:
+        return "Passed"
+    else:
+        return "Failed"
+
+
+def display_report(name, course, grades, average, remark):
+    print("\n===== STUDENT REPORT =====")
+    print("Name:", name)
+    print("Course:", course)
+    print("Grades:", grades)
+    print("Average:", round(average, 2))
+    print("Remark:", remark)
+
+
+# Main Program
+student_name, student_course = get_student_info()
+student_grades = get_grades()
+
+average = calculate_average(student_grades)
+remark = get_remark(average)
+
+display_report(
+    student_name,
+    student_course,
+    student_grades,
+    average,
+    remark
+)

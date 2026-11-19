@@ -1,0 +1,101 @@
+
+"""Module 12 – Python Strings
+Run one example at a time. Examples progress from Easy to Hard.
+"""
+
+# Easy 1: Creating and Printing Strings
+# A string is a sequence of characters enclosed in quotation marks.
+name = "Daniel"
+message = "Welcome to Python!"
+
+print(name)
+print(message)
+
+
+# Easy 2: String Concatenation
+# The + operator joins two or more strings together.
+first_name = "Daniel"
+last_name = "Reyes"
+
+full_name = first_name + " " + last_name
+
+print("Full Name:", full_name)
+
+
+# Easy 3: String Length
+# len() returns the total number of characters in a string.
+word = "Programming"
+
+print("Word:", word)
+print("Length:", len(word))
+
+
+# Easy 4: Accessing String Characters
+# Indexing allows you to access individual characters in a string.
+word = "PYTHON"
+
+print("First Character:", word[0])
+print("Second Character:", word[1])
+print("Last Character:", word[-1])
+
+
+# Intermediate 1: String Methods
+# String methods modify the appearance or format of text.
+text = "hello python programming"
+
+print("Uppercase:", text.upper())
+print("Lowercase:", text.lower())
+print("Capitalized:", text.capitalize())
+print("Title Case:", text.title())
+
+
+# Intermediate 2: Removing and Replacing Characters
+# strip() removes surrounding spaces, while replace() substitutes text.
+text = "   Hello Python!   "
+
+print("Original:", text)
+print("Without Spaces:", text.strip())
+
+message = "I love Java"
+new_message = message.replace("Java", "Python")
+
+print("Updated Message:", new_message)
+
+
+# Intermediate 3: Searching and Checking Strings
+# find() locates a substring, while startswith() and endswith()
+# check how a string begins and ends.
+
+sentence = "Python is easy to learn"
+
+print("Position of easy:", sentence.find("easy"))
+print("Starts with Python:", sentence.startswith("Python"))
+print("Ends with learn:", sentence.endswith("learn"))
+print("Contains Python:", "Python" in sentence)
+
+
+# Hard: Student Information Formatter
+# This program collects student information,
+# formats the text, and displays a formatted profile.
+
+name = input("Enter your full name: ")
+course = input("Enter your course: ")
+section = input("Enter your section: ")
+
+name = name.strip().title()
+course = course.strip().upper()
+section = section.strip().upper()
+
+print("\n===== STUDENT PROFILE =====")
+print("Name:", name)
+print("Course:", course)
+print("Section:", section)
+print("Name Length:", len(name))
+print("Course Length:", len(course))
+
+if name.startswith("A"):
+    print("Name starts with the letter A.")
+else:
+    print("Name does not start with the letter A.")
+
+print("\nProfile successfully formatted!")

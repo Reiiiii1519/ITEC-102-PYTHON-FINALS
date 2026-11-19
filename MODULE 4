@@ -1,0 +1,166 @@
+
+"""Module 4 – Match Case Statements
+Run one example at a time. Examples progress from Easy to Hard.
+Requires Python 3.10 or newer.
+"""
+
+# Easy 1: Basic Match Case
+day = 1
+
+match day:
+    case 1:
+        print("Monday")
+    case 2:
+        print("Tuesday")
+    case 3:
+        print("Wednesday")
+    case _:
+        print("Invalid day")
+
+
+# Easy 2: Match Case with User Input
+choice = input("Enter a letter (A, B, or C): ").upper()
+
+match choice:
+    case "A":
+        print("You selected Option A.")
+    case "B":
+        print("You selected Option B.")
+    case "C":
+        print("You selected Option C.")
+    case _:
+        print("Invalid choice.")
+
+
+# Easy 3: Simple Calculator
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+operator = input("Enter operator (+, -, *, /): ")
+
+match operator:
+    case "+":
+        print("Result:", num1 + num2)
+    case "-":
+        print("Result:", num1 - num2)
+    case "*":
+        print("Result:", num1 * num2)
+    case "/":
+        if num2 != 0:
+            print("Result:", num1 / num2)
+        else:
+            print("Cannot divide by zero.")
+    case _:
+        print("Invalid operator.")
+
+
+# Easy 4: Select a Day of the Week
+day = input("Enter a day: ").lower()
+
+match day:
+    case "monday":
+        print("Start of the work week.")
+    case "friday":
+        print("Almost the weekend!")
+    case "saturday" | "sunday":
+        print("It's the weekend!")
+    case _:
+        print("Regular weekday or invalid day.")
+
+
+# Intermediate 1: Menu Selection
+print("===== MAIN MENU =====")
+print("1. Start")
+print("2. Settings")
+print("3. Help")
+print("4. Exit")
+
+choice = int(input("Choose an option: "))
+
+match choice:
+    case 1:
+        print("Starting program...")
+    case 2:
+        print("Opening settings...")
+    case 3:
+        print("Displaying help...")
+    case 4:
+        print("Exiting program...")
+    case _:
+        print("Invalid menu option.")
+
+
+# Intermediate 2: Grade Description
+grade = input("Enter your grade (A, B, C, D, F): ").upper()
+
+match grade:
+    case "A":
+        print("Excellent!")
+    case "B":
+        print("Very Good!")
+    case "C":
+        print("Good!")
+    case "D":
+        print("Needs Improvement.")
+    case "F":
+        print("Failed.")
+    case _:
+        print("Invalid grade.")
+
+
+# Intermediate 3: Month Identification
+month = int(input("Enter month number (1-12): "))
+
+match month:
+    case 1 | 2 | 12:
+        print("Winter")
+    case 3 | 4 | 5:
+        print("Spring")
+    case 6 | 7 | 8:
+        print("Summer")
+    case 9 | 10 | 11:
+        print("Autumn")
+    case _:
+        print("Invalid month number.")
+
+
+# Hard: ATM Menu System
+balance = 5000.00
+
+print("\n===== ATM SYSTEM =====")
+print("1. Check Balance")
+print("2. Deposit Money")
+print("3. Withdraw Money")
+print("4. Exit")
+
+choice = int(input("Select an option: "))
+
+match choice:
+    case 1:
+        print("Current Balance: ₱", balance)
+
+    case 2:
+        amount = float(input("Enter deposit amount: "))
+        if amount > 0:
+            balance += amount
+            print("Deposit successful!")
+            print("New Balance: ₱", balance)
+        else:
+            print("Invalid deposit amount.")
+
+    case 3:
+        amount = float(input("Enter withdrawal amount: "))
+        if amount > 0:
+            if amount <= balance:
+                balance -= amount
+                print("Withdrawal successful!")
+                print("Remaining Balance: ₱", balance)
+            else:
+                print("Insufficient balance.")
+        else:
+            print("Invalid withdrawal amount.")
+
+    case 4:
+        print("Thank you for using our ATM!")
+
+    case _:
+        print("Invalid option.")

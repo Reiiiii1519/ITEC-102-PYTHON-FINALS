@@ -1,0 +1,94 @@
+
+"""Module 5 – While Loops
+Run one example at a time. Examples progress from Easy to Hard.
+"""
+
+# Easy 1: Basic While Loop
+# Repeats the code while the condition is True.
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+
+
+# Easy 2: Print Numbers in Reverse
+number = 5
+
+while number >= 1:
+    print(number)
+    number -= 1
+
+
+# Easy 3: Print Even Numbers
+number = 2
+
+while number <= 10:
+    print(number)
+    number += 2
+
+
+# Easy 4: Repeat a Message
+count = 1
+
+while count <= 5:
+    print("Welcome to Python!")
+    count += 1
+
+
+# Intermediate 1: Sum of Numbers
+number = 1
+total = 0
+
+while number <= 10:
+    total += number
+    number += 1
+
+print("Total Sum:", total)
+
+
+# Intermediate 2: Multiplication Table
+number = int(input("Enter a number: "))
+count = 1
+
+while count <= 10:
+    print(number, "x", count, "=", number * count)
+    count += 1
+
+
+# Intermediate 3: Guessing Number
+secret_number = 7
+guess = 0
+
+while guess != secret_number:
+    guess = int(input("Guess the number (1-10): "))
+
+    if guess == secret_number:
+        print("Correct! You guessed the number.")
+    else:
+        print("Wrong guess. Try again.")
+
+
+# Hard: Simple Login System
+correct_username = "admin"
+correct_password = "1234"
+
+attempts = 0
+max_attempts = 3
+
+while attempts < max_attempts:
+    username = input("Enter username: ")
+    password = input("Enter password: ")
+
+    if username == correct_username and password == correct_password:
+        print("Login successful! Welcome.")
+        break
+    else:
+        attempts += 1
+        remaining = max_attempts - attempts
+
+        if remaining > 0:
+            print("Incorrect username or password.")
+            print("Attempts remaining:", remaining)
+        else:
+            print("Maximum attempts reached. Access denied.")

@@ -1,0 +1,98 @@
+
+"""Module 10 – List Comprehensions
+Run one example at a time. Examples progress from Easy to Hard.
+"""
+
+# Easy 1: Create a List Using a For Loop
+# A list comprehension provides a shorter way to create lists.
+
+numbers = []
+
+for number in range(1, 6):
+    numbers.append(number)
+
+print(numbers)
+
+
+# Easy 2: Create a List Using List Comprehension
+# The expression is followed by a for loop inside square brackets.
+
+numbers = [number for number in range(1, 6)]
+
+print(numbers)
+
+
+# Easy 3: Generate Squares of Numbers
+# List comprehension can perform calculations while creating a list.
+
+squares = [number ** 2 for number in range(1, 6)]
+
+print("Squares:", squares)
+
+
+# Easy 4: Convert Words to Uppercase
+# upper() converts each word into uppercase letters.
+
+fruits = ["apple", "banana", "orange", "mango"]
+
+uppercase_fruits = [fruit.upper() for fruit in fruits]
+
+print(uppercase_fruits)
+
+
+# Intermediate 1: Get Even Numbers
+# An if condition filters which values are included in the new list.
+
+numbers = [number for number in range(1, 21) if number % 2 == 0]
+
+print("Even Numbers:", numbers)
+
+
+# Intermediate 2: Get Numbers Greater Than 50
+# List comprehension can filter existing list items using conditions.
+
+numbers = [25, 60, 45, 80, 35, 90, 55]
+
+filtered_numbers = [number for number in numbers if number > 50]
+
+print("Numbers Greater Than 50:", filtered_numbers)
+
+
+# Intermediate 3: Convert Temperatures
+# List comprehension can apply mathematical formulas to every item.
+
+celsius = [0, 10, 20, 30, 40]
+
+fahrenheit = [(temperature * 9/5) + 32 for temperature in celsius]
+
+print("Celsius:", celsius)
+print("Fahrenheit:", fahrenheit)
+
+
+# Hard: Student Grade Analyzer
+# This program uses list comprehension to filter grades,
+# calculate passing students, and generate grade descriptions.
+
+students = ["Alex", "Maria", "John", "Sarah", "Mark"]
+grades = [90, 85, 68, 95, 72]
+
+passing_grades = [grade for grade in grades if grade >= 75]
+
+failed_grades = [grade for grade in grades if grade < 75]
+
+remarks = [
+    "Passed" if grade >= 75 else "Failed"
+    for grade in grades
+]
+
+print("===== STUDENT GRADE REPORT =====")
+
+for index in range(len(students)):
+    print(students[index], "-", grades[index], "-", remarks[index])
+
+print("\n===== GRADE SUMMARY =====")
+print("Passing Grades:", passing_grades)
+print("Failed Grades:", failed_grades)
+print("Total Passing Students:", len(passing_grades))
+print("Total Failed Students:", len(failed_grades))
+print("Class Average:", round(sum(grades) / len(grades), 2))

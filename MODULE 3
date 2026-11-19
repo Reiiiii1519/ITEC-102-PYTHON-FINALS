@@ -1,0 +1,102 @@
+
+"""Module 3 – If, Elif, Else & Nested If
+Run one example at a time. Examples progress from Easy to Hard.
+"""
+
+# Easy 1: Basic If Statement
+age = 18
+
+if age >= 18:
+    print("You are an adult.")
+
+
+# Easy 2: If-Else Statement
+number = int(input("Enter a number: "))
+
+if number >= 0:
+    print("Positive number or zero")
+else:
+    print("Negative number")
+
+
+# Easy 3: If-Elif-Else Statement
+grade = float(input("Enter your grade: "))
+
+if grade >= 90:
+    print("Excellent")
+elif grade >= 80:
+    print("Very Good")
+elif grade >= 75:
+    print("Passed")
+else:
+    print("Failed")
+
+
+# Easy 4: Multiple Conditions
+age = int(input("Enter your age: "))
+
+if age >= 18 and age <= 60:
+    print("You are eligible.")
+else:
+    print("You are not eligible.")
+
+
+# Intermediate 1: Check Even or Odd with If-Else
+number = int(input("Enter a number: "))
+
+if number % 2 == 0:
+    print("The number is even.")
+else:
+    print("The number is odd.")
+
+
+# Intermediate 2: Determine the Largest Number
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+num3 = int(input("Enter third number: "))
+
+if num1 > num2 and num1 > num3:
+    print("Largest number:", num1)
+elif num2 > num1 and num2 > num3:
+    print("Largest number:", num2)
+else:
+    print("Largest number:", num3)
+
+
+# Intermediate 3: Nested If Statement
+# An if statement placed inside another if statement.
+username = input("Enter username: ")
+password = input("Enter password: ")
+
+if username == "admin":
+    if password == "1234":
+        print("Login successful!")
+    else:
+        print("Incorrect password.")
+else:
+    print("Username not found.")
+
+
+# Hard: Student Admission System
+name = input("Enter student name: ")
+age = int(input("Enter age: "))
+grade = float(input("Enter average grade: "))
+
+print("\n===== STUDENT ADMISSION RESULT =====")
+print("Name:", name)
+print("Age:", age)
+print("Average Grade:", grade)
+
+if age >= 18:
+    if grade >= 90:
+        print("Admission Status: Accepted")
+        print("Scholarship: Eligible")
+    elif grade >= 75:
+        print("Admission Status: Accepted")
+        print("Scholarship: Not Eligible")
+    else:
+        print("Admission Status: Rejected")
+        print("Reason: Grade requirement not met.")
+else:
+    print("Admission Status: Rejected")
+    print("Reason: Age requirement not met.")
